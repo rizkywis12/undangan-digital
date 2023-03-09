@@ -130,7 +130,7 @@
 <div id="floating-button" class="float">
 	<div class="control-center open">
 		<ul class="right-sidebar">
-			<audio id="track" autoplay>
+			<audio autoplay id="track">
 				<source src="./music/BTS - Crystal Snow [128 kbps].mp3" type="audio/mpeg" />
 			  </audio>
 			  <div id="player-container">
@@ -561,6 +561,8 @@ var audio = document.getElementById("myaudio");
 		controlBtn.addEventListener("click", playPause);
 		track.addEventListener("load", function() {
 		  controlBtn.className = "play";
+		  track.play();
+		      
 		});
 		</script>
 
