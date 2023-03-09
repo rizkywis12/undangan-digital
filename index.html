@@ -559,7 +559,7 @@ var audio = document.getElementById("myaudio");
 		}
 		
 		controlBtn.addEventListener("click", playPause);
-		track.addEventListener("ended", function() {
+		track.addEventListener("load", function() {
 		  controlBtn.className = "play";
 		});
 		</script>
