@@ -544,21 +544,21 @@ var audio = document.getElementById("myaudio");
 	<script>var track = document.getElementById('track');
 
 		var controlBtn = document.getElementById('play-pause');
-		
 		function playPause() {
 			if (track.paused) {
 				track.play();
 				//controlBtn.textContent = "Pause";
 				controlBtn.className = "play";
-			}else if (track.play) {
-				track.pause();
+			}else if(track.paused) {
+    window.addEventListener("load", function() {
+        track.play();
+    });
+		}else{
+			track.pause();
 				//controlBtn.textContent = "Pause";
 				controlBtn.className = "pause";
-		}else{
-			window.addEventListener("load", function() {
-  track.play();
-		});
-		}}
+		}
+	}
 		
 		controlBtn.addEventListener("click", playPause);
 		track.addEventListener("ended", function() {
