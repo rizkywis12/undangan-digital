@@ -557,12 +557,12 @@ var audio = document.getElementById("myaudio");
 				controlBtn.className = "pause";
 			}
 		}
-		
 		controlBtn.addEventListener("click", playPause);
-		track.addEventListener("load", function() {
+		track.addEventListener("ended", function() {
 		  controlBtn.className = "play";
-		  track.play();
-		      
+		});
+		  window.addEventListener("load", function() {
+  track.play();    
 		});
 		</script>
 
