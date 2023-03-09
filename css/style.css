@@ -457,6 +457,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #player-container #play-pause {
   cursor: pointer;
   text-indent: -999999px;
+   display: inline-flex;
   height:50px;
   width: 30px;
   margin-left: 10px;
