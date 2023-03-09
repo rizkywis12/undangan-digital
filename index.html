@@ -550,19 +550,21 @@ var audio = document.getElementById("myaudio");
 				track.play();
 				//controlBtn.textContent = "Pause";
 				controlBtn.className = "play";
-			} else { 
+			}if (track.play) {
 				track.pause();
-				 //controlBtn.textContent = "Play";
+				//controlBtn.textContent = "Pause";
 				controlBtn.className = "pause";
-			}
-		}
+		}else{
+			window.addEventListener("load", function() {
+  track.play();
+		});
+		}}
+		
 		controlBtn.addEventListener("click", playPause);
 		track.addEventListener("ended", function() {
 		  controlBtn.className = "play";
 		});
-		  window.addEventListener("load", function() {
-  track.play();    
-		});
+		 
 		</script>
 
 <script>
